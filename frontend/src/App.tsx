@@ -19,6 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={() => window.electronAPI.showMessage("Hello User!")}></button>
     </div>
   );
 }

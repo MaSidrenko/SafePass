@@ -40,7 +40,7 @@ app.whenReady().then(() => {
   //     buttons: ['Close', 'Registr', 'Enter']
   //   });
   registrMessageBoxHandlers(mainWindow);
-  mainWindow.webContents.once("did-finish-load", async () => {
+   mainWindow.webContents.once("did-finish-load", async () => {
     const result = await mainWindow.webContents.executeJavaScript(
         "window.electronAPI.showInputBox && window.electronAPI.showInputBox()"
     );

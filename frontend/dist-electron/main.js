@@ -38,6 +38,10 @@ electron_1.app.whenReady().then(() => {
     //     buttons: ['Close', 'Registr', 'Enter']
     //   });
     (0, hellosheetHandlers_1.registrMessageBoxHandlers)(mainWindow);
+    mainWindow.webContents.once("did-finish-load", async () => {
+        const result = await mainWindow.webContents.executeJavaScript("window.electronAPI.showInputBox && window.electronAPI.showInputBox()");
+        console.log("User entered: ", result);
+    });
 });
 electron_1.app.on("window-all-closed", () => {
     if (process.platform !== "darwin")

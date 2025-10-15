@@ -20,7 +20,7 @@ function registrMessageBoxHandlers(parent) {
                 nodeIntegration: false
             },
         });
-        await modal.loadFile(path_1.default.join(__dirname, '../HelloSheet/hellosheet.html'));
+        await modal.loadFile(path_1.default.join(process.cwd(), './electron/HelloSheet/hellosheet.html'));
         return new Promise((resolve) => {
             electron_1.ipcMain.once('messagebox-submit', (event, value) => {
                 resolve(value);

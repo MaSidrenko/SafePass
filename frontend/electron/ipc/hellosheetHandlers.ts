@@ -15,7 +15,7 @@ export function registrMessageBoxHandlers(parent: BrowserWindow) {
                 nodeIntegration: false
             },
         });
-        await modal.loadFile(path.join(__dirname, '../HelloSheet/hellosheet.html'));
+        await modal.loadFile(path.join(process.cwd(), './electron/HelloSheet/hellosheet.html'));
 
         return new Promise<string>((resolve) => {
             ipcMain.once('messagebox-submit', (event, value) =>{

@@ -3,6 +3,18 @@
   /* border: 3px solid red; */
   width: 370px;
   height: 170px;
+  /* background: #d1fef2; */
+  /* background: black; */
+  /* background-color: #2a2a2a; */
+  background-color: #212121;
+  border: 2px solid orange;
+  padding: 30px 50px;
+  text-align: center;
+  color: orange;
+  font-size: 18px;
+  box-shadow: 0 0 15px orange;
+  animation: pulse 1.2s infinite alternate;
+  border-radius: 10px;
 }
 .hello-message > input {
   width: 98%;
@@ -10,13 +22,80 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid orange;
+  border-radius: 5px;
+  background-color: #2b2b2b; /* чуть светлее фона формы */
+  box-shadow: 0 0 7px rgba(255, 166, 0, 0.767);
+  color: orange;
+  font-size: 16px;
+  outline: none;
+  transition: linear 0.3s all;
 }
 
 .hello-message > button {
   position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 98%;
+  left: 98%;
   transform: translate(-100%, -100%);
-  width: 150px;
+  width: 130px;
   height: 25px;
+  background-color: orange;
+  color: black;
+  border: 3px solid orange;
+  border-color: #ffb84d;
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(255, 166, 0, 0.767);
+  cursor: pointer;
+  font-weight: bold;
+  transition: linear 0.3s all;
+}
+
+#Register {
+  top: 98%;
+  left: 65%;
+  transform: translate(-100%, -100%);
+}
+
+#ForgotPassword {
+  top: 98%;
+  left: 30%;
+  transform: translate(-100%, -100%);
+}
+#Exit {
+  width: 25px;
+  height: 25px;
+  background: orangered;
+  top: 2%;
+  left: 99%;
+  transform: translate(-100%, 0%);
+  border: 3px solid rgb(172, 47, 1);
+  border-color: rgb(173, 46, 0);
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(255, 68, 0, 0.726);
+}
+#Exit:hover {
+  box-shadow: 0 0 7px orangered;
+  border: 3px solid orangered;
+}
+button:hover {
+  background-color: #ffffff00;
+  /* color: rgb(255, 122, 73); */
+  color: orange;
+  box-shadow: 0 0 7px rgb(255, 122, 73);
+  border: 3px solid rgb(255, 122, 73);
+}
+
+input:focus {
+  /* opacity: 0.7; */
+  color: rgb(255, 186, 59);
+  box-shadow: 0 0 7px rgb(255, 122, 73);
+  border: 2px solid rgb(255, 122, 73);
+}
+input:focus::placeholder {
+  color: rgb(255, 186, 59);
+}
+input::placeholder {
+  /* color: rgb(255, 186, 59); */
+  text-align: center;
+  transition: linear 0.3s all;
 }
